@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+
+<body>
+    <div style="margin-left: 50px; margin-top: 50px;">
+        <h2>Contact me:</h2>
+        <br />
+        <p><a href="skype:oleganl?add" style="font-size: medium"><i class="fa fa-skype fa-fw"></i> Skype</a></p>
+        <p><a href="https://www.linkedin.com/in/oleg-larionov-98b48412b?trk=nav_responsive_tab_profile" style="font-size: medium"><i class="fa fa-linkedin fa-fw"></i> Linkedin</a></p>
+        <p><a href="mailto:ollarilari@gmail.com" style="font-size: medium"><i class="fa fa-google fa-fw"></i> ollarilari@gmail.com</a></p>
+        <p><a style="font-size:medium"><i class="fa fa-phone fa-fw"></i>+38(067)-438-98-29</a></p>
+
+        @using (Html.BeginForm("Index", "Contacts", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td><p>Name:</p></td>
+                    <td>@Html.TextBox("name", " ")</td>
+                </tr>
+
+                <tr>
+                    <td><p style="margin-right:20px">Message:</p></td>
+                    <td>@Html.TextArea("message", " ") </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="btn btn-primary btn-sm">Send</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><h4 style="color:blue"> @ViewBag.Text</h4><h4 style="color:blue">@ViewBag.Error</h4></td>
+                </tr>        
+            </table>
+
+        }
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Work3";
+}
+@using Grocery.Security
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Work 3</title>
+</head>
+<body>
+    <div>
+        Work 2
+        <br />
+        Welcome @SessionPersister.UserName
+        <br />
+        <a href="@Url.Action("LogOut", "Account")">Logout</a>
+    </div>
+</body>
+</html>

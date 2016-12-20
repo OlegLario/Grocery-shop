@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Grocery market</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap2.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Grocery market", "Index", "Products", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <style>
+                li {
+                    padding-left: 40px;
+                }
+            </style>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                    <li>@Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
+                    <li>@Html.ActionLink("Contacts", "Index", "Contacts")</li>
+                    <li>@Html.ActionLink("Authorization", "Index", "Account")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container body-content">
+
+        @RenderBody()
+        
+        <hr />
+        <center><div id="footer">
+            <p>&copy; @DateTime.Now.Year - Larionov Oleg</p>
+        </div></center>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
