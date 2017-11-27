@@ -18,7 +18,7 @@ namespace Grocery.Controllers
     {
         private ApplicationUserManager UserManager
         {
-            get
+            get////////////////////////////////////////////
             {
                 return HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
